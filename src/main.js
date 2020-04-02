@@ -1,14 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
-// 按需导入ui组件
-/* import './plugins/element.js' */
-
-
- import ElementUI from "element-ui";  //导入ui  手动配置
-import "element-ui/lib/theme-chalk/index.css";  //导入ui样式
-Vue.use(ElementUI) //插件 
+import './plugins/element.js'// 按需导入ui组件
+//导入全局样式表
+import './assets/css/global.css'
 
 Vue.config.productionTip = false
 
