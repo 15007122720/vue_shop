@@ -128,6 +128,6 @@ export default {
 
 .btns {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 </style>

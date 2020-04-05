@@ -10,12 +10,24 @@ import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
 
 import axios from 'axios'
+
+import Mbx from './components/Mbx.vue'
+/* mbx注册为全局组件 */
+Vue.component('Mbx', Mbx)
+
 /* 配置请求的根路径 */
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+/* axios拦截器 */
+axios.interceptors.request.use(config => {
+  console.log(config)/* 获得一个包含地址的对象 */
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
 
+/* 注册router到vue实例中，App是根组件内部会有路由功能 */
 new Vue({
   router,
   render: h => h(App)
