@@ -315,11 +315,28 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }
-      ).catch(err => err) /* console.log(res) 确认删除则返回值为字符串confirm取消为cancel */
+      ).catch(
+        err => err
+      ) /* console.log(res) 确认删除则返回值为字符串confirm取消为cancel */
       if (confirmResult !== 'confirm') {
         return this.$message.info('已取消删除')
       }
-      console.log('确认了删除')
+      /* console.log('确认了删除') */
+      const { data: res } = await this.$http.delete('users/' + id)
+      if (res.meta.status !== 200) {
+        return this.$message.error('删除用户失败')
+      }
+      this.$message.success('删除用户成功')
+      /* 获取当前数据和当前页码,然后当数据长度等于1，就让页码做减法 */
+      /* console.log(this.userlist, this.queryInfo.pagenum) */
+      if (this.queryInfo !== 1) {
+        if (this.userlist.length === 1) {
+          this.queryInfo.pagenum -= 1
+        }
+      }
+
+      /* 重新获取用户列表数据   b  */
+      this.getUserList()
     }
   }
 }

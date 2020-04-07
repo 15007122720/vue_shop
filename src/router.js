@@ -5,7 +5,7 @@ import Login from './components/Login.vue' // 登录组件
 import Home from './components/Home.vue' // home组件
 import Welcome from './components/Welcome.vue'
 import Users from './components/user/Users.vue'/* 用户列表 */
-
+import Rights from './components/power/Rights.vue'/* 权限列表 */
 Vue.use(Router)
 
 // 路由规则
@@ -19,7 +19,8 @@ const router = new Router({
       redirect: '/welcome',
       children: [
         { path: '/welcome', component: Welcome },
-        { path: '/users', component: Users }]
+        { path: '/users', component: Users },
+        { path: '/rights', component: Rights }]
     }
   ]
 })
