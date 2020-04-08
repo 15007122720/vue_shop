@@ -19,7 +19,7 @@ Vue.component('Mbx', Mbx)
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 /* axios拦截器 */
 axios.interceptors.request.use(config => {
-  console.log(config)/* 获得一个包含地址的对象 */
+  /* console.log(config) *//* 获得一个包含地址的对象 */
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })

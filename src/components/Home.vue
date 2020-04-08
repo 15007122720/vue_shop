@@ -94,8 +94,8 @@ export default {
       /* 如果返回的状态不等于200就  return 回错误信息 */
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.menulist = res.data
-      console.log(this.menulist)
-      console.log(res)
+      /* console.log(this.menulist) */
+      /* console.log(res) */
     },
     /* 点击按钮，切换菜单的折叠展开 */
     toggleCollapse() {
