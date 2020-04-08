@@ -233,7 +233,7 @@ export default {
         this.$message.error('添加失败')
       }
       this.rightslist = res.data
-      console.log(this.rightslist)
+      /*  console.log(this.rightslist) */
 
       /* 递归获取三级节点(调用) */
       this.getLeafkeys(role, this.defkeys)

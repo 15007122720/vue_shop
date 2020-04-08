@@ -11,7 +11,8 @@ import './assets/css/global.css'
 
 import axios from 'axios'
 
-import Mbx from './components/Mbx.vue'
+import Mbx from './components/Mbx.vue'/* 面包屑 */
+import TreeTable from 'vue-table-with-tree-grid'/* 商品分类组件 */
 /* mbx注册为全局组件 */
 Vue.component('Mbx', Mbx)
 
@@ -26,6 +27,8 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+
+Vue.component('tree-table', TreeTable)/* 导入商品分类 组件 */
 
 /* 注册router到vue实例中，App是根组件内部会有路由功能 */
 new Vue({
