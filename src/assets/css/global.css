@@ -7,6 +7,10 @@ body,
   padding: 0;
   min-width: 1366px;
 }
+/*设置级联选择器的高度 */
+.el-cascader-menu {
+  height: 240px;
+}
 .el-breadcrumb {
   margin-bottom: 15px;
   font-size: 12px;
