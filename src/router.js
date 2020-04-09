@@ -8,6 +8,7 @@ import Users from './components/user/Users.vue'/* 用户列表 */
 import Rights from './components/power/Rights.vue'/* 权限列表 */
 import Roles from './components/power/Roles'/* 角色列表 */
 import Cate from './components/goods/Cate'/*商品分类 */
+import Params from './components/goods/Params'/* 参数分类 */
 Vue.use(Router)
 
 // 路由规则
@@ -24,7 +25,8 @@ const router = new Router({
         { path: '/users', component: Users },
         { path: '/rights', component: Rights },
         { path: '/roles', component: Roles },
-        { path: '/categories', component: Cate }
+        { path: '/categories', component: Cate },
+        { path: '/params', component: Params }
       ]
     }
   ]
