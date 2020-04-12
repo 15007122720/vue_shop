@@ -7,7 +7,7 @@ import Welcome from './components/Welcome.vue'
 import Users from './components/user/Users.vue'/* 用户列表 */
 import Rights from './components/power/Rights.vue'/* 权限列表 */
 import Roles from './components/power/Roles'/* 角色列表 */
-import Cate from './components/goods/Cate'/*商品分类 */
+import Cate from './components/goods/Cate'/* 商品分类 */
 import Params from './components/goods/Params'/* 参数分类 */
 Vue.use(Router)
 
