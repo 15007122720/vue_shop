@@ -30,6 +30,21 @@ Vue.config.productionTip = false
 
 Vue.component('tree-table', TreeTable)/* 导入商品分类 组件 */
 
+/* 全局过滤器 */
+Vue.filter('dateFormat', function (originVal) {
+  const time = new Date(originVal)
+
+  const y = time.getFullYear()
+  const m = (time.getMonth() + 1 + '').padStart(2, '0')
+  const d = (time.getDate() + '').padStart(2, '0')
+
+  const hh = (time.getHours() + '').padStart(2, '0')
+  const mm = (time.getMinutes() + '').padStart(2, '0')
+  const ss = (time.getSeconds() + '').padStart(2, '0')
+
+  return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+})
+
 /* 注册router到vue实例中，App是根组件内部会有路由功能 */
 new Vue({
   router,

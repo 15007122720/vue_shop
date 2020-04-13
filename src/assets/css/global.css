@@ -26,3 +26,11 @@ body,
 .el-pagination {
   margin-top: 15px;
 }
+
+.el-steps {
+  margin: 15px 0;
+}
+
+.el-steps {
+  font-size: 13px;
+}
