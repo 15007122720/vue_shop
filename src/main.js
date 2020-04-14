@@ -13,8 +13,19 @@ import axios from 'axios'
 
 import Mbx from './components/Mbx.vue'/* 面包屑 */
 import TreeTable from 'vue-table-with-tree-grid'/* 商品分类组件 */
+
+/* 富文本编辑器 */
+import VueQuillEditor from 'vue-quill-editor'
+/* require styles富文本编辑对应的样式 */
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+/* 富文本注册为全局组件 */
+Vue.use(VueQuillEditor)
 /* mbx注册为全局组件 */
 Vue.component('Mbx', Mbx)
+
 
 /* 配置请求的根路径 */
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
